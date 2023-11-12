@@ -7,6 +7,7 @@ const ReviewsController = (app) => {
         res.json(actualReview);
     };
 
+    // using query
     const findAllReviews = async (req, res) => {
         const params = req.query;
         let reviews = null;
