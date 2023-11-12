@@ -3,10 +3,11 @@ import mongoose from "mongoose";
 import cors from "cors";
 import session from "express-session";
 import ReviewsController from "./reviews/reviews-controller.js";
-
+import UsersController from "./users/users-controller.js";
+import SessionController from "./users/session-controller.js";
 
 mongoose.connect(
-    "mongodb+srv://sylviawing96:sylviawing72273@clusterkanbas.5ud86ou.mongodb.net/viewvibe?retryWrites=true&w=majority"
+    "mongodb+srv://sylviawing96:sylviawing72273@clusterkanbas.5ud86ou.mongodb.net/test?retryWrites=true&w=majority"
 );
 
 const app = express();
@@ -30,5 +31,7 @@ app.use(
 app.use(express.json());
 
 ReviewsController(app);
+UsersController(app);
+SessionController(app);
 
 app.listen(process.env.PORT || 4000);
