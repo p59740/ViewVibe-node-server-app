@@ -5,6 +5,7 @@ import session from "express-session";
 import ReviewsController from "./reviews/reviews-controller.js";
 import UsersController from "./users/users-controller.js";
 import SessionController from "./users/session-controller.js";
+import bookmarkController from "./bookmarks/bookmark-controller.js";
 
 mongoose.connect(
     "mongodb+srv://sylviawing96:sylviawing72273@clusterkanbas.5ud86ou.mongodb.net/test?retryWrites=true&w=majority"
@@ -33,5 +34,6 @@ app.use(express.json());
 ReviewsController(app);
 UsersController(app);
 SessionController(app);
+bookmarkController(app);
 
 app.listen(process.env.PORT || 4000);
