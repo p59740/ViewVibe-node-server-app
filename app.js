@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 import session from "express-session";
 import ReviewsController from "./reviews/reviews-controller.js";
+import bookmarkController from "./bookmarks/bookmark-controller.js";
 
 
 mongoose.connect(
@@ -30,5 +31,6 @@ app.use(
 app.use(express.json());
 
 ReviewsController(app);
+bookmarkController(app);
 
 app.listen(process.env.PORT || 4000);
