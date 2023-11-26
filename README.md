@@ -1,1 +1,0 @@
-Project for WEB-ViewVibe, using MERN

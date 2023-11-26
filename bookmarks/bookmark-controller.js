@@ -24,9 +24,9 @@ const deleteBookmarks = async (req, res) => {
     res.json(status);
 }
 
-export default (app) => {
-    app.get('/bookmark/', findBookmarks);
-    app.get('/bookmark/:uid', findBookmarksByUserId);
-    app.post('/bookmark/', createBookmarks);
-    app.delete('/bookmark/:bid', deleteBookmarks);
+export default (app) =>{
+    app.get('/bookmark/',findBookmarks);
+    app.get('/bookmark/:uid',findBookmarksByUserId);
+    app.post('/bookmark/',createBookmarks);
+    app.delete('/bookmark/:bid',deleteBookmarks);
 }
