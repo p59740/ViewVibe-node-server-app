@@ -60,19 +60,17 @@ const UsersController = (app) => {
     res.sendStatus(403);
   };
 
+  const logout = (req, res) => {
+    req.session.destroy();
+    res.sendStatus(200);
+  };
+
   const addLike = async (req, res) => {
     const liked = req.body.liked;
     const username = req.body.username;
     await dao.addLike(liked, username);
     res.json({liked, username});
   }
-  
-  const logout = (req, res) => {
-    req.session.destroy();
-    res.sendStatus(200);
-  };
-
-
 
   const findUserByUsername = async (req, res) => {
     const username = req.params.username;
