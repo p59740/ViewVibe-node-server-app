@@ -69,6 +69,7 @@ const UsersController = (app) => {
     const liked = req.body.liked;
     const username = req.body.username;
     await dao.addLike(liked, username);
+    await dao.following(liked, username);
     res.json({liked, username});
   }
 
