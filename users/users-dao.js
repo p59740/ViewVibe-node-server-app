@@ -24,5 +24,7 @@ export const updateUser = (uid, userUpdates) =>
 
 export const addLike = (liked, username) => usersModel.findOneAndUpdate({username: liked}, {$push: {likes: username}});
 
+export const following = (liked, username) => usersModel.findOneAndUpdate({username: username}, {$push: {following: liked}});
+
 export const findUserByUsername = (username) =>
   usersModel.findOne({ username });
