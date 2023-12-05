@@ -1,5 +1,4 @@
 import * as dao from "./reviews-dao.js";
-import {findByUserName, findReviewByIMDBID} from "./reviews-dao.js";
 
 const ReviewsController = (app) => {
     const createReview = async (req, res) => {

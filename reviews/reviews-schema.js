@@ -11,5 +11,4 @@ const reviewsSchema = mongoose.Schema(
     },
     { collection: "reviews" }
 );
-
 export default reviewsSchema;
