@@ -24,5 +24,4 @@ const usersSchema = mongoose.Schema(
   },
   { collection: "users" }
 );
-
 export default usersSchema;
