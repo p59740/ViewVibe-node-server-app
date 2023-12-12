@@ -6,8 +6,8 @@ const reviewsSchema = mongoose.Schema(
         content: { type: String, required: true },
         score: Number,
         imdbID: { type: String, required: true },
-        time: { type: Number, required: true },
-        type: { type: String, required: true }
+        time: {type: Number, required: true},
+        type: {type: String, required: true}
     },
     { collection: "reviews" }
 );
