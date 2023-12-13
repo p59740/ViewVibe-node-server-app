@@ -15,7 +15,8 @@ const app = express();
 app.use(
   cors({
     credentials: true,
-    origin: "http://localhost:3001",
+    // origin: "http://localhost:3000",
+    origin: "https://quiet-valkyrie-7c0418.netlify.app"
   })
 );
 
@@ -25,8 +26,8 @@ app.use(
     secret: "should be environment variable!",
     resave: false,
     saveUninitialized: true,
-    //cookie: { secure: true, sameSite: 'none' }
-    cookie: { secure: false},
+    cookie: { secure: true, sameSite: 'none' }
+    // cookie: { secure: false},
   })
 );
 app.use(express.json());
