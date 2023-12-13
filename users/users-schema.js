@@ -16,6 +16,10 @@ const usersSchema = mongoose.Schema(
     likes: {
       type: Array,
       default: []
+    },
+    following:{
+      type:Array,
+      default:[]
     }
   },
   { collection: "users" }
